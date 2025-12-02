@@ -30,7 +30,7 @@ export function AuthForm() {
       router.push("/dashboard");
       router.refresh();
     } else {
-      setError(result.error || "Login failed");
+      setError(result.error || "Falha ao entrar");
       setIsLoading(false);
     }
   }
@@ -48,7 +48,7 @@ export function AuthForm() {
     const confirmPassword = formData.get("confirmPassword") as string;
 
     if (password !== confirmPassword) {
-      setError("Passwords do not match");
+      setError("As senhas não coincidem");
       setIsLoading(false);
       return;
     }
@@ -56,7 +56,7 @@ export function AuthForm() {
     const result = await signup(formData);
 
     if (result.success) {
-      setSuccessMessage("Account created! Please check your email to verify your account.");
+      setSuccessMessage("Conta criada! Por favor, verifique seu e-mail para confirmar sua conta.");
       setIsLoading(false);
       
       // Optionally redirect to login after a delay
@@ -65,7 +65,7 @@ export function AuthForm() {
         router.refresh();
       }, 2000);
     } else {
-      setError(result.error || "Signup failed");
+      setError(result.error || "Falha ao criar conta");
       setIsLoading(false);
     }
   }
@@ -79,7 +79,7 @@ export function AuthForm() {
     if (result.url) {
       window.location.href = result.url;
     } else {
-      setError(result.error || "Failed to sign in with Google");
+      setError(result.error || "Falha ao entrar com Google");
       setIsLoading(false);
     }
   }
@@ -87,21 +87,21 @@ export function AuthForm() {
   return (
     <Tabs defaultValue="login" className="w-full">
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="login">Login</TabsTrigger>
-        <TabsTrigger value="signup">Sign Up</TabsTrigger>
+        <TabsTrigger value="login">Entrar</TabsTrigger>
+        <TabsTrigger value="signup">Criar Conta</TabsTrigger>
       </TabsList>
 
       {/* Login Tab */}
       <TabsContent value="login">
         <Card>
           <CardHeader>
-            <CardTitle>Welcome Back</CardTitle>
-            <CardDescription>Sign in to your Eternizale account</CardDescription>
+            <CardTitle>Bem-vindo de Volta</CardTitle>
+            <CardDescription>Entre na sua conta Eternizale</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleLogin} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="login-email">Email</Label>
+                <Label htmlFor="login-email">E-mail</Label>
                 <Input
                   id="login-email"
                   name="email"
@@ -112,7 +112,7 @@ export function AuthForm() {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="login-password">Password</Label>
+                <Label htmlFor="login-password">Senha</Label>
                 <Input
                   id="login-password"
                   name="password"
@@ -133,10 +133,10 @@ export function AuthForm() {
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Signing in...
+                    Entrando...
                   </>
                 ) : (
-                  "Sign In"
+                  "Entrar"
                 )}
               </Button>
             </form>
@@ -146,7 +146,7 @@ export function AuthForm() {
                 <span className="w-full border-t" />
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-background px-2 text-muted-foreground">Or continue with</span>
+                <span className="bg-background px-2 text-muted-foreground">Ou continue com</span>
               </div>
             </div>
 
@@ -168,24 +168,24 @@ export function AuthForm() {
       <TabsContent value="signup">
         <Card>
           <CardHeader>
-            <CardTitle>Create Account</CardTitle>
-            <CardDescription>Sign up to start creating eternal memories</CardDescription>
+            <CardTitle>Criar Conta</CardTitle>
+            <CardDescription>Cadastre-se para criar memórias eternas</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSignup} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="signup-name">Name</Label>
+                <Label htmlFor="signup-name">Nome</Label>
                 <Input
                   id="signup-name"
                   name="name"
                   type="text"
-                  placeholder="Your Name"
+                  placeholder="Seu Nome"
                   required
                   disabled={isLoading}
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="signup-email">Email</Label>
+                <Label htmlFor="signup-email">E-mail</Label>
                 <Input
                   id="signup-email"
                   name="email"
@@ -196,7 +196,7 @@ export function AuthForm() {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="signup-password">Password</Label>
+                <Label htmlFor="signup-password">Senha</Label>
                 <Input
                   id="signup-password"
                   name="password"
@@ -208,7 +208,7 @@ export function AuthForm() {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="signup-confirm-password">Confirm Password</Label>
+                <Label htmlFor="signup-confirm-password">Confirmar Senha</Label>
                 <Input
                   id="signup-confirm-password"
                   name="confirmPassword"
@@ -236,10 +236,10 @@ export function AuthForm() {
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Creating account...
+                    Criando conta...
                   </>
                 ) : (
-                  "Create Account"
+                  "Criar Conta"
                 )}
               </Button>
             </form>
@@ -249,7 +249,7 @@ export function AuthForm() {
                 <span className="w-full border-t" />
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-background px-2 text-muted-foreground">Or continue with</span>
+                <span className="bg-background px-2 text-muted-foreground">Ou continue com</span>
               </div>
             </div>
 
@@ -265,7 +265,7 @@ export function AuthForm() {
             </Button>
           </CardContent>
           <CardFooter className="flex flex-col space-y-2 text-sm text-muted-foreground">
-            <p>By signing up, you agree to our Terms of Service and Privacy Policy.</p>
+            <p>Ao se cadastrar, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
           </CardFooter>
         </Card>
       </TabsContent>

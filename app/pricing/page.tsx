@@ -169,7 +169,7 @@ export default async function PricingPage() {
       <footer className="border-t border-gray-200 dark:border-gray-800 py-8 bg-white/50 dark:bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600 dark:text-gray-400">
           <p className="text-sm">
-            © 2025 Eternizale. Made with <Heart className="inline w-4 h-4 text-red-500 mx-1" /> for preserving precious moments.
+            © 2025 Eternizale. Feito com <Heart className="inline w-4 h-4 text-red-500 mx-1" /> para preservar momentos preciosos.
           </p>
         </div>
       </footer>

@@ -12,21 +12,21 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Eternizale - Create Beautiful Digital Memory Pages Forever",
+    default: "Eternizale - Crie Belas Páginas de Memória Digital Para Sempre",
     template: "%s | Eternizale"
   },
-  description: "Transform your precious moments into stunning digital memory pages. Add photos, videos, music, and voice messages. Perfect for gifts, celebrations, and preserving memories forever. Start free today!",
+  description: "Transforme seus momentos preciosos em lindas páginas de memória digital. Adicione fotos, vídeos, música e mensagens de voz. Perfeito para presentes, celebrações e preservar memórias para sempre. Comece grátis hoje!",
   keywords: [
-    "digital memories",
-    "memory pages",
-    "photo album",
-    "digital gift",
-    "memory preservation",
-    "photo collage",
-    "digital scrapbook",
-    "celebration gift",
-    "memory book",
-    "eternal memories"
+    "memórias digitais",
+    "páginas de memória",
+    "álbum de fotos",
+    "presente digital",
+    "preservação de memórias",
+    "colagem de fotos",
+    "scrapbook digital",
+    "presente de celebração",
+    "livro de memórias",
+    "memórias eternas"
   ],
   authors: [{ name: "Eternizale" }],
   creator: "Eternizale",
@@ -46,25 +46,25 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Eternizale - Create Beautiful Digital Memory Pages Forever",
-    description: "Transform your precious moments into stunning digital memory pages. Perfect for gifts and celebrations. Start free!",
+    title: "Eternizale - Crie Belas Páginas de Memória Digital Para Sempre",
+    description: "Transforme seus momentos preciosos em lindas páginas de memória digital. Perfeito para presentes e celebrações. Comece grátis!",
     url: '/',
     siteName: 'Eternizale',
-    locale: 'en_US',
+    locale: 'pt_BR',
     type: 'website',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Eternizale - Digital Memory Pages',
+        alt: 'Eternizale - Páginas de Memória Digital',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Eternizale - Create Beautiful Digital Memory Pages",
-    description: "Transform precious moments into stunning digital memories. Free to start!",
+    title: "Eternizale - Crie Belas Páginas de Memória Digital",
+    description: "Transforme momentos preciosos em lindas memórias digitais. Grátis para começar!",
     images: ['/og-image.png'],
     creator: '@eternizale',
   },

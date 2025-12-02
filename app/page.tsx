@@ -47,13 +47,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-up animation-delay-300">
               <Link href="/dashboard">
                 <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all group">
-                  Get Started
+                  Começar Agora
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link href="/pricing">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8 py-6 border-2 hover:bg-violet-50 dark:hover:bg-violet-900/20">
-                  View Pricing
+                  Ver Planos
                 </Button>
               </Link>
             </div>
@@ -110,7 +110,7 @@ export default function Home() {
       <footer className="border-t border-gray-200 dark:border-gray-800 py-8 bg-white/50 dark:bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600 dark:text-gray-400">
           <p className="text-sm">
-            © 2025 Eternizale. Made with <Heart className="inline w-4 h-4 text-red-500 mx-1" /> for preserving precious moments.
+            © 2025 Eternizale. Feito com <Heart className="inline w-4 h-4 text-red-500 mx-1" /> para preservar momentos preciosos.
           </p>
         </div>
       </footer>

@@ -5,8 +5,8 @@ import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 
 export const metadata = {
-  title: "Login | Eternizale",
-  description: "Sign in to your Eternizale account or create a new one",
+  title: "Entrar | Eternizale",
+  description: "Entre na sua conta Eternizale ou crie uma nova",
 };
 
 export default async function LoginPage() {
@@ -33,7 +33,7 @@ export default async function LoginPage() {
           </Link>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-1">
             <Sparkles className="w-4 h-4" />
-            Create Eternal Digital Memories
+            Crie Memórias Digitais Eternas
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default async function LoginPage() {
             href="/"
             className="text-sm text-gray-600 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
           >
-            ← Back to Home
+            ← Voltar para o Início
           </Link>
         </div>
       </div>

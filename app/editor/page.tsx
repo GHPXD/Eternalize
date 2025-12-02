@@ -225,7 +225,7 @@ function EditorContent() {
               <div className="flex items-center justify-between px-4 py-3 border-b bg-white dark:bg-gray-900">
                 <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
                   <Eye className="w-4 h-4" />
-                  Preview
+                  Visualização
                 </h3>
                 <Button
                   variant="ghost"
@@ -253,7 +253,7 @@ function EditorContent() {
                   className="gap-2 shadow-lg bg-white dark:bg-gray-900"
                 >
                   <PanelRight className="w-4 h-4" />
-                  Preview
+                  Visualizar
                 </Button>
               </div>
             )}
